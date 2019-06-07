@@ -1,0 +1,49 @@
+service:
+  name: gamelink
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+functions:
+  # USER
+  createUser:
+    handler: user.create
+    events:
+      - http:
+          method: post
+          path: user
+  updateUser:
+    handler: user.create
+    events:
+        - http:
+            method: put
+            path: user/{id}
+  deleteUser:
+    handler: user.delete
+    events:
+        - http:
+            method: delete
+            path: user/{id}
+  
+  # Achievement
+  addAchievement:
+    handler: achievement.add
+    events:
+        - http:
+            method: post
+            path: achievement
+  updateAchievement:
+    handler: user/{user}/achievement.add
+    events:
+        - http:
+            method: put
+            path: achievement/{id}
+  deleteAchievement:
+    handler: achievement.delete
+    events:
+        - http:
+            method: delete
+            path: achievement/{id}
