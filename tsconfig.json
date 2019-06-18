@@ -1,14 +1,21 @@
 {
   "compilerOptions": {
+    "target": "es5",
     "lib": [
-      "es2017"
+      "es6"
     ],
+    "types": [
+      "reflect-metadata",
+      "node"
+    ],
+    "typeRoots": [
+      // add path to @types
+      "node_modules/@types"
+    ],
+    "module": "commonjs",
     "moduleResolution": "node",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "sourceMap": true,
-    "target": "es2017",
-    "outDir": "lib"
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "exclude": [
     "node_modules"
