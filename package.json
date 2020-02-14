@@ -9,7 +9,7 @@
   "dependencies": {
     "@aws/dynamodb-data-mapper": "^0.7.3",
     "@aws/dynamodb-data-mapper-annotations": "^0.7.3",
-    "aws-lambda": "^0.1.2",
+    "aws-lambda": "^1.0.5",
     "source-map-support": "^0.5.10"
   },
   "devDependencies": {
